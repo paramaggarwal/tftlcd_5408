@@ -42,7 +42,7 @@
 }
 #define write8(x)     { write_8(x); WR_STROBE; }
 #define write16(x)    { uint8_t h = (x)>>8, l = x; write8(h); write8(l); }
-#define READ_8(dst)   { RD_STROBE; dst = read_8(); delay(1); RD_IDLE; }
+#define READ_8(dst)   { RD_STROBE; dst = read_8(); delayMicroseconds(1); RD_IDLE; }
 #define READ_16(dst)  { uint8_t hi; READ_8(hi); READ_8(dst); dst |= (hi << 8); }
 
 #define PIN_LOW(p, b)        gpio_write_bit(p, b, LOW)
