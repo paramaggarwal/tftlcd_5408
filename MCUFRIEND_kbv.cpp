@@ -1,12 +1,13 @@
 #include "MCUFRIEND_kbv.h"
-#include "mcufriend_shield.h"
+// #include "mcufriend_uno.h"
+#include "mcufriend_stm32.h"
 
 #define wait_ms(ms)  delay(ms)
 #define READ_BGR        (1<<1)
 #define INVERT_GS       (1<<2)
 #define REV_SCREEN      (1<<3)
 
-MCUFRIEND_kbv::MCUFRIEND_kbv(int CS, int RS, int WR, int RD, int RST):Adafruit_GFX(240, 320)
+MCUFRIEND_kbv::MCUFRIEND_kbv():Adafruit_GFX(240, 320)
 {
     // we can not access GPIO pins until AHB has been enabled.
 }

@@ -4,7 +4,7 @@
 class MCUFRIEND_kbv : public Adafruit_GFX {
 
 	public:
-	MCUFRIEND_kbv(int CS=A3, int RS=A2, int WR=A1, int RD=A0, int RST=A4);
+	MCUFRIEND_kbv();
 	void     reset(void);
 	void     begin(uint16_t ID);
 	virtual void     drawPixel(int16_t x, int16_t y, uint16_t color);  // and these three
